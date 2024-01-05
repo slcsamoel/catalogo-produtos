@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pedidos', function (Blueprint $table) {
+        Schema::create('accompaniments', function (Blueprint $table) {
             $table->id();
-            $table->string('nome')->nullable();
-            $table->string('telefone')->nullable();
-            $table->decimal('valor_total')->nullable();
-            $table->dateTime('data_hora')->nullable()->default(now());
+            $table->string('nome')->unique();
+            $table->decimal('preco')->nullable();
+            $table->text('descricao')->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedidos');
+        Schema::dropIfExists('accompaniments');
     }
 };

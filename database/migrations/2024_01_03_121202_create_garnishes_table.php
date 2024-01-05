@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('garnishes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome')->unique();
+            $table->decimal('preco')->nullable();
+            $table->text('descricao')->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }

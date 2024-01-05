@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->$table->bigInteger('type_id')->nullable();
+            $table->unsignedBigInteger('type_id')->nullable();
             $table->string('foto')->nullable();
+            $table->integer('status')->default(1);
         });
     }
 
