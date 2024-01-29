@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
             $table->string('nome')->nullable();
+            $table->string('cpf')->nullable();
             $table->string('telefone')->nullable();
+            $table->string('endereco')->nullable();
+            $table->string('observacao')->nullable();
             $table->decimal('valor_total')->nullable();
             $table->dateTime('data_hora')->nullable()->default(now());
             $table->timestamps();

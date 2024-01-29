@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +15,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(50)->create();
+        DB::table('type_users')->insert([
+            'type' => 'Root',
+            'descricao' => 'Usuario Root do sistema',
+        ]);
+
+        DB::table('type_users')->insert([
+            'type' => 'Administrador',
+            'descricao' => 'Usuario  Administrador do Sistema',
+        ]);
+
+        DB::table('type_users')->insert([
+            'type' => 'Assistente de conteúdo',
+            'descricao' => 'Usuario  com permissão para criar e gerenciar Conteudos',
+        ]);
     }
 }
