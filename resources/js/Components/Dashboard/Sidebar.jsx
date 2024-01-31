@@ -22,11 +22,11 @@ export default function Sidebar() {
                             <span className="nav-link-text ms-1">Dashboard</span>
                         </Link>
 
-                        <Link className={`${route().current('profile') && 'active'} nav-link`} href={route('profile')}>
+                        <Link className={`${route().current('typeProduct.*') && 'active'} nav-link`} href={route('typeProduct.index')}>
                             <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                                 <i className="fa fa-cutlery text-dark text-sm opacity-10" />
                             </div>
-                            <span className="nav-link-text ms-1">Pedidos</span>
+                            <span className="nav-link-text ms-1">Tipos De Produtos</span>
                         </Link>
 
                     </li>

@@ -16,10 +16,6 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="/css/argon-dashboard.css?v=2.0.0" rel="stylesheet" />
 
-    <script defer>
-        var APP_URL = {{ config('url') }}
-    </script>
-
     @routes
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
