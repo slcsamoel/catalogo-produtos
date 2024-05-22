@@ -33,7 +33,8 @@ return [
     |
     */
 
-    $dataBase = parse_url("mysql://uzln99i4mwrewvip:a0ip8p184fjch8yc@gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m826k2bx4xsasym4");
+    $dataBase = parse_url("mysql://uzln99i4mwrewvip:a0ip8p184fjch8yc@gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m826k2bx4xsasym4"),
+
 
     'connections' => [
 
