@@ -25,7 +25,7 @@ export default function Login({ errors }) {
                             <div className="card card-plain">
                                 <div className="card z-index-0">
                                     <div className="card-header text-center pt-4">
-                                        <h5>Login Painel</h5>
+                                        <h5>Painel Adminstrativo</h5>
                                     </div>
                                     {/* <div className="row px-xl-5 px-sm-4 px-3 d-flex justify-content-center">
                                         <div className="col-12 px-1 inline-block">
@@ -173,16 +173,16 @@ export default function Login({ errors }) {
                                 className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden"
                                 style={{
                                     backgroundImage:
-                                        'url("/img/sigfood.jpg")',
+                                        'url("/img/homeAdmin.jpeg")',
                                     backgroundSize: "cover",
                                 }}
                             >
                                 <span className="mask bg-gradient-primary opacity-6" />
                                 <h4 className="mt-5 text-white font-weight-bolder position-relative">
-                                    "Restaurante 01"
+                                     UP Celulares
                                 </h4>
                                 <p className="text-white position-relative">
-                                    Aqui vai mais informações
+
                                 </p>
                             </div>
                         </div>

@@ -28,6 +28,27 @@ class TypeProductController extends Controller
             'type' => 'success',
             'message' => 'User has been created',
         ]);
+    }
 
+    public function update(TypeProductRequest $request, TypeProduct $typeProduct)
+    {
+        $attr = $request->toArray();
+
+        $typeProduct->update($attr);
+
+        return back()->with([
+            'type' => 'success',
+            'message' => 'User has been updated',
+        ]);
+    }
+
+    public function destroy(TypeProduct $typeProduct)
+    {
+        $typeProduct->delete();
+
+        return back()->with([
+            'type' => 'success',
+            'message' => 'User has been deleted',
+        ]);
     }
 }

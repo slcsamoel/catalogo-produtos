@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('pedido_id');
             $table->unsignedBigInteger('product_id')->nullable();
-            $table->unsignedBigInteger('prato_id')->nullable();
             $table->timestamps();
         });
     }

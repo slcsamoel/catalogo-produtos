@@ -12,14 +12,14 @@ export default function Dashboard() {
                         <div className="row">
                             <div className="col-8">
                             <div className="numbers">
-                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
+                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Vendas Hoje</p>
                                 <h5 className="font-weight-bolder">
                                 $53,000
                                 </h5>
-                                <p className="mb-0">
+                                {/* <p className="mb-0">
                                 <span className="text-success text-sm font-weight-bolder">+55%</span>
                                 since yesterday
-                                </p>
+                                </p> */}
                             </div>
                             </div>
                             <div className="col-4 text-end">
@@ -37,14 +37,14 @@ export default function Dashboard() {
                         <div className="row">
                             <div className="col-8">
                             <div className="numbers">
-                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
+                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Vendas dos Mês</p>
                                 <h5 className="font-weight-bolder">
                                 2,300
                                 </h5>
-                                <p className="mb-0">
+                                {/* <p className="mb-0">
                                 <span className="text-success text-sm font-weight-bolder">+3%</span>
                                 since last week
-                                </p>
+                                </p> */}
                             </div>
                             </div>
                             <div className="col-4 text-end">
@@ -62,14 +62,14 @@ export default function Dashboard() {
                         <div className="row">
                             <div className="col-8">
                             <div className="numbers">
-                                <p className="text-sm mb-0 text-uppercase font-weight-bold">New Clients</p>
+                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Vendas da Semana</p>
                                 <h5 className="font-weight-bolder">
                                 +3,462
                                 </h5>
-                                <p className="mb-0">
+                                {/* <p className="mb-0">
                                 <span className="text-danger text-sm font-weight-bolder">-2%</span>
                                 since last quarter
-                                </p>
+                                </p> */}
                             </div>
                             </div>
                             <div className="col-4 text-end">
@@ -87,13 +87,13 @@ export default function Dashboard() {
                         <div className="row">
                             <div className="col-8">
                             <div className="numbers">
-                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Sales</p>
+                                <p className="text-sm mb-0 text-uppercase font-weight-bold">Total</p>
                                 <h5 className="font-weight-bolder">
                                 $103,430
                                 </h5>
-                                <p className="mb-0">
+                                {/* <p className="mb-0">
                                 <span className="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                </p>
+                                </p> */}
                             </div>
                             </div>
                             <div className="col-4 text-end">
@@ -108,7 +108,7 @@ export default function Dashboard() {
                 </div>
                 <div className="row mt-4">
                         <div className="col-lg-7 mb-lg-0 mb-4">
-                            <div className="card ">
+                            {/* <div className="card ">
                                 <div className="card-header pb-0 p-3">
                                 <div className="d-flex justify-content-between">
                                     <h6 className="mb-2">Sales by Country</h6>
@@ -244,7 +244,7 @@ export default function Dashboard() {
                                     </tbody>
                                 </table>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     <div className="col-lg-5">
                     <div className="card card-carousel overflow-hidden h-100 p-0">
@@ -290,7 +290,7 @@ export default function Dashboard() {
                     </div>
                     </div>
                 </div>
-                
+
             </div>
 
         </>

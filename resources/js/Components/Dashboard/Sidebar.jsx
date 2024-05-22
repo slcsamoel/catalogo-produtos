@@ -8,7 +8,7 @@ export default function Sidebar() {
                 <i className="fas fa-times p-3 cursor-pointer opacity-5 position-absolute end-0 top-0 d-none d-xl-none opacity-8 text-white" aria-hidden="true" id="iconSidenav" />
                 <Link className="navbar-brand m-0" href={route('home')} target="_blank">
                     {/* <img src="/img/logo-ct.png" className="navbar-brand-img h-100" alt="main_logo" /> */}
-                    <span className="ms-1 font-weight-bold"> Laravel Inertia React Starter</span>
+                    <span className="ms-1 font-weight-bold">Up Celulares</span>
                 </Link>
             </div>
             <hr className="horizontal dark mt-0" />
@@ -29,9 +29,16 @@ export default function Sidebar() {
                             <span className="nav-link-text ms-1">Tipos De Produtos</span>
                         </Link>
 
+                        <Link className={`${route().current('product.*') && 'active'} nav-link`} href={route('typeProduct.index')}>
+                            <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i className="fa fa-cutlery text-dark text-sm opacity-10" />
+                            </div>
+                            <span className="nav-link-text ms-1">Produtos</span>
+                        </Link>
+
                     </li>
                     <li className="nav-item mt-3">
-                        <h6 className="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Settings</h6>
+                        <h6 className="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Configurações</h6>
                     </li>
                     <li className="nav-item">
                         <Link className={`${route().current('profile') && 'active'} nav-link`} href={route('profile')}>
@@ -42,9 +49,9 @@ export default function Sidebar() {
                         </Link>
 
                     </li>
-                    <li className="nav-item mt-3">
+                    {/* <li className="nav-item mt-3">
                         <h6 className="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Configurações</h6>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <Link className={`${route().current('users.*') && 'active'} nav-link`} href={route('users.index')}>
                             <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -58,7 +65,7 @@ export default function Sidebar() {
                             <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i className="fas fa-sign-out-alt text-danger text-sm opacity-10"></i>
                             </div>
-                            <span className="nav-link-text ms-1">Log out</span>
+                            <span className="nav-link-text ms-1">Sair</span>
                         </Link>
                     </li>
                 </ul>

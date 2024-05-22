@@ -19,11 +19,10 @@ return new class extends Migration
             $table->string('nome')->unique();
             $table->decimal('preco')->nullable();
             $table->text('descricao')->nullable();
+            $table->string('foto')->nullable();
             $table->decimal('qnt')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
-
-
 
             $table->foreign('type_id')
                     ->references('id')

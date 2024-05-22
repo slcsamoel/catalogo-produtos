@@ -17,4 +17,4 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 
-mix.browserSync('admininertia.my');
+mix.browserSync('tcc.my');

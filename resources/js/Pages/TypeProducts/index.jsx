@@ -4,12 +4,32 @@ import Dialog from '../../Components/Dashboard/Dialog';
 import Base from '../../Layouts/Base';
 import useDialog from '../../Hooks/useDialog';
 import CreateTypeProduct from '../../Components/Dashboard/TypeProducts/CreateTypeProduct';
+import EditTypeProduct from '../../Components/Dashboard/TypeProducts/EditTypeProduct';
 import { Inertia } from '@inertiajs/inertia';
 
 export default function Index(props){
     const {data: typesProducts, links, meta} = props.typesProducts;
     const [state, setState] = useState([])
     const [addDialogHandler, addCloseTrigger,addTrigger] = useDialog()
+    const [UpdateDialogHandler, UpdateCloseTrigger,UpdateTrigger] = useDialog()
+    const [destroyDialogHandler, destroyCloseTrigger,destroyTrigger] = useDialog()
+
+
+    const openUpdateDialog = (user) => {
+        setState(user);
+        UpdateDialogHandler()
+    }
+
+    const openDestroyDialog = (user) => {
+        setState(user);
+        destroyDialogHandler()
+    };
+
+    const destroytype = () => {
+        Inertia.delete(
+            route('typeProduct.destroy', state.id),
+            { onSuccess: () => destroyCloseTrigger() });
+    }
 
     return (
         <>
@@ -18,17 +38,17 @@ export default function Index(props){
                     <CreateTypeProduct close={addCloseTrigger}/>
                 </Dialog>
 
-                {/* <Dialog trigger={UpdateTrigger} title={`Update type: ${state.name}`}>
-                    <Edittype model={state} close={UpdateCloseTrigger}/>
+                <Dialog trigger={UpdateTrigger} title={`Update type: ${state.type}`}>
+                    <EditTypeProduct model={state} close={UpdateCloseTrigger}/>
                 </Dialog>
 
-                <Dialog trigger={destroyTrigger} title={`Delete type: ${state.name}`}>
+                <Dialog trigger={destroyTrigger} title={`Delete type: ${state.type}`}>
                     <p>Are you sure to delete this type ?</p>
                     <div className="modal-footer">
                         <button type="button" className="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" onClick={destroytype} className="btn bg-gradient-danger">Delete</button>
                     </div>
-                </Dialog> */}
+                </Dialog>
 
                 <div className="row pb-4">
                     <div className="col-12 w-100">
@@ -74,12 +94,12 @@ export default function Index(props){
                                                 </td>
                                                 <td className="align-middle text-center" width="10%">
                                                 <div>
-                                                    {/* <button type="button" onClick={() => openUpdateDialog(type)} className="btn btn-vimeo btn-icon-only mx-2">
+                                                    <button type="button" onClick={() => openUpdateDialog(type)} className="btn btn-vimeo btn-icon-only mx-2">
                                                         <span className="btn-inner--icon"><i className="fas fa-pencil-alt"></i></span>
                                                     </button>
                                                     <button type="button" onClick={() => openDestroyDialog(type)} className="btn btn-youtube btn-icon-only">
                                                         <span className="btn-inner--icon"><i className="fas fa-trash"></i></span>
-                                                    </button> */}
+                                                    </button>
                                                 </div>
                                                 </td>
                                             </tr>
