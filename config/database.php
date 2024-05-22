@@ -33,6 +33,8 @@ return [
     |
     */
 
+    $dataBase = parse_url("mysql://uzln99i4mwrewvip:a0ip8p184fjch8yc@gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m826k2bx4xsasym4");
+
     'connections' => [
 
         'sqlite' => [
@@ -46,11 +48,16 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            //'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => $dataBase["host"],
+            //'port' => env('DB_PORT', '3306'),
+            'port' => $dataBase["port"],
+            //'database' => env('DB_DATABASE', 'forge'),
+            'database' => ltrim($dataBase["path"], "/"),
+            //'username' => env('DB_USERNAME', 'forge'),
+            'username' => $dataBase["user"],
+            //'password' => env('DB_PASSWORD', ''),
+            'password' => $dataBase["pass"],
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
