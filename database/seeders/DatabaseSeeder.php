@@ -29,5 +29,17 @@ class DatabaseSeeder extends Seeder
             'type' => 'Assistente de conteúdo',
             'descricao' => 'Usuario  com permissão para criar e gerenciar Conteudos',
         ]);
+
+
+        // Usuario Admin
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'email' => 'admin@system.com',
+            'password' => "bcrypt('admin')",
+            'created_at' => "2024-05-21 14:09:51",
+            'updated_at' => "2024-05-21 14:09:51",
+            'status' => 1
+        ]);
+
     }
 }
