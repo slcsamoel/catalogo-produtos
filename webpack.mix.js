@@ -17,4 +17,4 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 
-mix.browserSync('boiling-scrubland-04736-0d34e961b328.herokuapp.com');
+mix.browserSync('tcc.my');
